@@ -1,0 +1,61 @@
+.example-card {
+  max-width: 300px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.margens-content{
+  margin-top: 20px;
+  height: 100%;
+  position: relative;
+}
+
+
+
+.margens-container{
+  margin: 20px 20px 20px 20px;
+  height: 100%;
+  display: block;
+  background-color: aliceblue;
+}
+
+.card-info-number{
+  height: 150px;
+}
+
+
+
+.grafico-principal{
+  position: relative;
+  height: 490px;
+}
+
+
+.cards-acessorios{
+  overflow: auto;
+  max-height: 100%;
+  width: 100%;
+}
+
+
+.example-table-container {
+  position: relative;
+  height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  overflow: scroll;
+  height: 400px;
+}
+
+
+.full-height{
+  height: 100%;
+}
+
+

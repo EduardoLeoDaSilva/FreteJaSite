@@ -1,0 +1,151 @@
+<div style="height: 100%;">
+  <div class="top-bg-blue"></div>
+
+  <!-- Sempre definir essa porcentagem para tamanho do conteudo bg -->
+  <div class="next-to-bg">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" style="height: 100%;">
+      <div fxFlex="47.5" style="text-align: start;">
+        <span class="titulos-paginas">Configurações de pagamento</span>
+      </div>
+      <div fxFlex="47.5" style="text-align: end;">
+        <button mat-raised-button>Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="center start" style="height: 85%">
+    <mat-tab-group mat-align-tabs="start" class="tabs mat-elevation-z4">
+      <mat-tab label="Configurações">
+
+        <form class="example-form">
+          <mat-form-field class="full-width">
+            <mat-label>Company (disabled)</mat-label>
+            <input matInput disabled value="Google">
+          </mat-form-field>
+          <br>
+
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <mat-icon matSuffix>account_circle</mat-icon>
+            <span>Conta bancária</span>
+          </div>
+          <br>
+
+          <table class="full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Agencia</mat-label>
+                  <input matInput>
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="full-width remover-margin-padding">
+                  <mat-select class="remover-margin-padding">
+                    <mat-option>Itau</mat-option>
+                    <mat-option>Nubank</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Conta</mat-label>
+                  <input matInput>
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Digito verificador</mat-label>
+                  <input matInput>
+                </mat-form-field>
+              </td>
+
+
+            </tr>
+          </table>
+          <br>
+
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <mat-icon matSuffix>account_circle</mat-icon>
+            <span>PIX</span>
+          </div>
+          <br>
+          <p>
+          <table class="full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Chave 1</mat-label>
+                  <input matInput>
+                </mat-form-field>
+              </td>
+              <td  class="full-width">
+                <mat-form-field class="full-width remover-margin-padding">
+                  <mat-select class="remover-margin-padding">
+                    <mat-option>Itau</mat-option>
+                    <mat-option>Nubank</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+              <td>
+                <div fxLayout="column" fxLayoutAlign="center end">
+                  <mat-label>Chave 1</mat-label>
+                  <mat-slide-toggle>Slide me!</mat-slide-toggle>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Chave 2</mat-label>
+                  <textarea matInput></textarea>
+                </mat-form-field>
+              </td>
+              <td  class="full-width">
+                <mat-form-field class="full-width remover-margin-padding">
+                  <mat-select class="remover-margin-padding">
+                    <mat-option>Itau</mat-option>
+                    <mat-option>Nubank</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+              <td>
+                <div fxLayout="column" fxLayoutAlign="center end">
+                  <mat-label>Chave 1</mat-label>
+                  <mat-slide-toggle>Slide me!</mat-slide-toggle>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Chave 3</mat-label>
+                  <textarea matInput></textarea>
+                </mat-form-field>
+              </td>
+              <td  class="full-width">
+                <mat-form-field class="full-width remover-margin-padding">
+                  <mat-select class="remover-margin-padding">
+                    <mat-option>Itau</mat-option>
+                    <mat-option>Nubank</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+              <td>
+                <div fxLayout="column" fxLayoutAlign="center end">
+                  <mat-label>Chave 1</mat-label>
+                  <mat-slide-toggle>Slide me!</mat-slide-toggle>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <p>
+        </form>
+
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+
+</div>

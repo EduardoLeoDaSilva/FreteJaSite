@@ -1,0 +1,152 @@
+<div class="margens-container">
+  <div fxLayout="column" fxLayoutGap="10px" class="margens-content">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center stretch" fxLayoutAlign="center start" fxLayoutGap="10px">
+      <!-- Primeira linha -->
+      <mat-card class="card-info-number" fxFlex="33">
+        <div fxLayout="column">
+          <h3>Total Entrada do Mês</h3>
+
+          <div fxLayout="row" fxLayoutAlign="space-around center">
+            <mat-icon mat-list-icon>settings</mat-icon>
+             <span>20</span>
+          </div>
+        </div>
+      </mat-card>
+
+    <mat-card class="card-info-number" fxFlex="33">
+      <div fxLayout="column">
+        <h3>Propostas aceitas</h3>
+
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+          <mat-icon mat-list-icon>settings</mat-icon>
+          <span>20</span>
+        </div>
+      </div>
+    </mat-card>
+    <mat-card class="card-info-number" fxFlex="33">
+      <div fxLayout="column">
+        <h3>Propostas recusadas</h3>
+
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center">
+          <mat-icon mat-list-icon>settings</mat-icon>
+          <span>20</span>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+    <!-- Segunda linha -->
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" class="grafico-principal">
+      <mat-card fxFlex="60">
+
+        <div style="display: block;">
+          <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels"
+            [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+            [chartType]="lineChartType" [plugins]="lineChartPlugins">
+          </canvas>
+        </div>
+
+      </mat-card>
+      <div fxLayout="column" fxLayoutGap="10px" fxFlex="40">
+        <mat-card fxFlex="49" class="cards-acessorios">
+
+          <div style="display: block;">
+            <canvas baseChart height="95" [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+              [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+            </canvas>
+          </div>
+
+        </mat-card>
+        <mat-card fxFlex="49" class="cards-acessorios">
+
+          <div style="display: block;">
+            <canvas baseChart height="95" [datasets]="barChartData" [labels]="barChartLabels"
+              [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend"
+              [chartType]="barChartType">
+            </canvas>
+          </div>
+
+
+        </mat-card>
+
+
+      </div>
+    </div>
+
+    <!-- Terceira linha -->
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxFlex="100" class="example-table-container">
+      <mat-card class="cards-acessorios">
+
+        <!-- Fazer um data source dps separado da page -->
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> Weight </th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> Symbol </th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </mat-card>
+      <mat-card fxFlex="50" class="cards-acessorios">
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> Weight </th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> Symbol </th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </mat-card>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,198 @@
+<div style="height: 100%;">
+  <div class="top-bg-blue"></div>
+
+  <!-- Sempre definir essa porcentagem para tamanho do conteudo bg -->
+  <div class="next-to-bg">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" style="height: 100%;">
+      <div fxFlex="47.5">
+        <span class="titulos-paginas">Propostas</span>
+      </div>
+      <div fxFlex="47.5" style="text-align: end;">
+        <button mat-flat-button color="primary">Criar anúncio</button>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="center start" style="height: 85%">
+    <mat-tab-group mat-align-tabs="start" class="tabs mat-elevation-z4">
+      <mat-tab label="Informações básicas">
+
+        <form class="example-form">
+          <mat-form-field class="full-width">
+            <mat-label>Company (disabled)</mat-label>
+            <input matInput disabled value="Google">
+          </mat-form-field>
+          <br>
+
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <mat-icon matSuffix>account_circle</mat-icon>
+            <span>Produto</span>
+          </div>
+          <br>
+
+          <mat-form-field class="full-width">
+            <mat-label>Nome anúncio</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Descrição do frete</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+
+          <br>
+
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <mat-icon matSuffix>account_circle</mat-icon>
+            <span>Endereço de origem</span>
+          </div>
+          <br>
+
+          <p>
+            <mat-form-field class="full-width">
+              <mat-label>Rua</mat-label>
+              <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Bairro</mat-label>
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </p>
+
+          <table class="full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>City</mat-label>
+                  <input matInput placeholder="Ex. San Francisco">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>State</mat-label>
+                  <input matInput placeholder="Ex. California">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Postal Code</mat-label>
+                  <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+                  <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <mat-icon matSuffix>account_circle</mat-icon>
+            <span>Endereço de Destino</span>
+          </div>
+          <br>
+
+          <p>
+            <mat-form-field class="full-width">
+              <mat-label>Rua</mat-label>
+              <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Bairro</mat-label>
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </p>
+
+          <table class="full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Cidade</mat-label>
+                  <input matInput placeholder="Ex. San Francisco">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>Estado</mat-label>
+                  <input matInput placeholder="Ex. California">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="full-width">
+                  <mat-label>CEP</mat-label>
+                  <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+                  <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <mat-icon matSuffix>account_circle</mat-icon>
+            <span>Destinatário</span>
+          </div>
+          <br>
+
+          <p>
+            <mat-form-field class="full-width">
+              <mat-label>Email</mat-label>
+              <textarea matInput placeholder="Ex. 100 Main St"></textarea>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Telefone</mat-label>
+              <textarea matInput></textarea>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Celular</mat-label>
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </p>
+        </form>
+
+      </mat-tab>
+      <mat-tab label="Imagem">
+        <div style="width: 100%;">
+          <table mat-table [dataSource]="dataSource" class="table-detalhes" style="width: 100%; height: 100%;">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="tipo">
+              <th mat-header-cell *matHeaderCellDef> Tipo </th>
+              <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="numero">
+              <th mat-header-cell *matHeaderCellDef> Numero </th>
+              <td mat-cell *matCellDef="let element"> {{element.numero}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef> Status </th>
+              <td mat-cell *matCellDef="let element">
+                <mat-icon matSuffix>{{element.status}}</mat-icon>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="arquivo">
+              <th mat-header-cell *matHeaderCellDef> Enviar </th>
+              <td mat-cell *matCellDef="let element">
+                <mat-icon matSuffix>{{account_circle}}</mat-icon>
+              </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row style="height: 100px;" *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+      </mat-tab>
+      <mat-tab label="Verificação facial"></mat-tab>
+    </mat-tab-group>
+  </div>
+
+
+</div>

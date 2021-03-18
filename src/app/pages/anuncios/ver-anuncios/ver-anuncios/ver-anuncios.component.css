@@ -1,0 +1,66 @@
+mat-list-option{
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+
+.height-item{
+  height: 125px;
+}
+
+.mat-expansion-panel{
+  height: 100%;
+}
+.codigo{
+  font-family: 'Anton', sans-serif;
+  color: #3f51b5 ;
+  font-size: x-large;
+}
+
+.data{
+  font-family: 'Anton', sans-serif;
+  color: gray;
+  font-size: small;
+}
+
+.tipo{
+  font-family: 'Anton', sans-serif;
+}
+
+.nome{
+  font-size: x-large;
+}
+
+.valor{
+  font-family: 'Anton', sans-serif ;
+  font-size: x-large;
+}
+
+.status{
+  font-family: 'Anton', sans-serif;
+}
+
+.margens-content{
+  margin-top: 20px;
+  height: 100%;
+  position: relative;
+}
+
+
+.estilo-matlist{
+background-color: white;
+}
+
+.margens-container{
+  margin: 10px 10px 10px 10px;
+  height: 100%;
+  display: block;
+  background-color: aliceblue;
+}
+
+
+.mat-row:hover{
+  background-color: cadetblue;
+  cursor: pointer;
+}

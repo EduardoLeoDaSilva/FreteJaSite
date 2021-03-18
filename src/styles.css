@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background-color: aliceblue;}
+body { margin: 0; font-family: 'Anton', sans-serif; }
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3f51b5;
+  border-radius: 10px;
+}
+
+mat-card{
+  border-top: solid #3f51b5;
+  border-left: solid #3f51b5;
+}
+/* scrollbar */
+
+span{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, a{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.titulos-paginas{
+  font-size: large;
+  color: white;
+}
+
+.top-bg-blue{
+  background-color: #3f51b5!important;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+}
+
+.next-to-bg{
+  position: relative;
+height: 10%;
+}
+
+
+table{
+  z-index: 10;
+  position: relative;
+}
+
+.table-detalhes{
+  width: 95%;
+
+}
+
+
+.tabs{
+  width: 95%;
+  background-color: white;
+  height: 100%;
+  z-index: 1;
+  border-radius: 1%;
+}
