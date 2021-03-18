@@ -21,9 +21,17 @@ export class VerAnunciosComponent implements OnInit {
     {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
   ];
 
+  ELEMENT_DATA2: any[] = [
+    {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+    {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
+    {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+    {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'}
+  ];
+
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = this.ELEMENT_DATA;
+  linhas = this.ELEMENT_DATA;
+  anuncios = this.ELEMENT_DATA2;
 
   constructor() { }
 

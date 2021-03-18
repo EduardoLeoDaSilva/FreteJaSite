@@ -20,13 +20,15 @@
       <mat-nav-list>
         <div *ngFor="let group of fillerNav">
           <div mat-subheader>{{group.secao}}</div>
-          <mat-list-item routerLink="{{item.rota}}" *ngFor="let item of group.itens">
+          <div *ngFor="let item of group.itens">
+          <mat-list-item routerLink="{{item.rota}}" *ngIf="item.isVisible === true" >
             <mat-icon mat-list-icon>{{item.icone}}</mat-icon>
             <div mat-line>
               {{item.nome}}
             </div>
             <mat-divider></mat-divider>
           </mat-list-item>
+        </div>
         </div>
       </mat-nav-list>
     </mat-sidenav>
