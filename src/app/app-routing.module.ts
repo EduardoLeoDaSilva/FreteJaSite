@@ -14,6 +14,10 @@ const routes: Routes =
   { path: 'config-pagamentos', loadChildren: () => import('./pages/conta-bancaria/config-pagamentos/config-pagamentos.module').then(m => m.ConfigPagamentosModule) },
   // tslint:disable-next-line:max-line-length
   { path: 'ver-anuncios', loadChildren: () => import('./pages/anuncios/ver-anuncios/ver-anuncios/ver-anuncios.module').then(m => m.VerAnunciosModule) },
+  { path: 'login', loadChildren: () => import('./pages/usuario/login/login.module').then(m => m.LoginModule) },
+  { path: 'cadastro', loadChildren: () => import('./pages/usuario/cadastro/cadastro.module').then(m => m.CadastroModule) },
+  { path: 'esqueci-senha', loadChildren: () => import('./pages/usuario/esqueci-senha/esqueci-senha.module').then(m => m.EsqueciSenhaModule) },
+  { path: 'reset-senha', loadChildren: () => import('./pages/usuario/reset-senha/reset-senha.module').then(m => m.ResetSenhaModule) },
   ];
 
 @NgModule({

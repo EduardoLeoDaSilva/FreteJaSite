@@ -1,0 +1,23 @@
+.container-principal{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+}
+
+.botoes-login-g-f{
+  width: 60%;
+}
+
+.form-componente-login{
+  width: 80%;
+}
+
+
+.login-column{
+  width: 18%;
+  height: 100%;
+  background-color: white;
+}

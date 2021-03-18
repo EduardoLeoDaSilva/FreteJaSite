@@ -1,0 +1,45 @@
+<div class="container-principal" fxLayout="row" fxLayoutAlign="end start" style="background-image: url('https://miro.medium.com/max/11730/0*CTSID5oVmY0pbvhH');">
+
+  <div class="login-column">
+
+    <div fxLayout="column" fxLayoutAlign="start center" style="margin-top: 25%;" fxLayoutGap="20px">
+
+    <img src="../../../../assets/LogoPNG150.png" style="width: 125px; height: 125px; border-radius: 40%;" alt="teste">
+
+    <form fxLayout="column" class="form-componente-login">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput  placeholder="Ex. pat@example.com">
+        <mat-error>
+          Please enter a valid email address
+        </mat-error>
+        <mat-error>
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="password" matInput>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary">Primary</button>
+    </form>
+    <a [routerLink]="['/esqueci-senha']" routerLinkActive="router-link-active" >Esqueceu sua senha?</a>
+
+    <button class="botoes-login-g-f" style="background-color: #d73d32; color: white;" mat-raised-button>Login com Google</button>
+    <button class="botoes-login-g-f" style="background-color: #3f5c9a; color: white;" mat-raised-button>Login com Facebook</button>
+
+
+
+
+    <div fxLayout="column" fxLayoutAlign="center start">
+        <span>Não tem conta?</span>
+        <a [routerLink]="['/cadastro']" routerLinkActive="router-link-active" >Criar uma conta</a>
+    </div>
+
+  </div>
+  </div>
+
+
+</div>

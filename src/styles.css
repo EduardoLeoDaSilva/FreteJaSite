@@ -31,6 +31,10 @@ span{
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+button{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 h1,h2,h3,h4,h5,h6, a{
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -52,6 +56,9 @@ h1,h2,h3,h4,h5,h6, a{
 height: 10%;
 }
 
+a{
+  text-decoration: none;
+}
 
 table{
   z-index: 10;

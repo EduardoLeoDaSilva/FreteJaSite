@@ -1,0 +1,53 @@
+<h2 mat-dialog-title>Pagamento</h2>
+<mat-dialog-content class="mat-typography">
+
+  <mat-tab-group>
+    <mat-tab label="Cartão de crédito">
+      <div class="example-container" fxLayout="column" fxLayoutGap="20px">
+        <mat-form-field appearance="fill">
+          <mat-label>número do cartão</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>nome impresso no cartão</mat-label>
+          <input matInput type="number" class="example-right-align">
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayoutGap="10px">
+          <mat-form-field appearance="fill">
+            <mat-label>validade</mat-label>
+            <input matInput type="number" class="example-right-align">
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>cvv</mat-label>
+            <input matInput type="number" class="example-right-align">
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="fill">
+          <mat-label>número de parcelas</mat-label>
+          <input matInput type="number" class="example-right-align">
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+      </div>
+    </mat-tab>
+    <mat-tab label="PIX"> Content 2 </mat-tab>
+  </mat-tab-group>
+
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Realizar pagamento</button>
+</mat-dialog-actions>

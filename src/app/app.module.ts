@@ -11,9 +11,17 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ModalEnviarPropostaComponent } from './components/modals/modal-enviar-proposta/modal-enviar-proposta.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ModalPagamentoComponent } from './components/modals/modal-pagamento/modal-pagamento.component';
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalEnviarPropostaComponent,
+    ModalPagamentoComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +33,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
